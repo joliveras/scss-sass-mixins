@@ -1,0 +1,14 @@
+@mixin first_button($color:white, $size:1em){
+    display: inline-block;
+    color: $color;
+    font-size: $size;
+    background-color: #333;
+    padding: .5em 2em;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: .2s;
+    &:hover, &:focus{
+      cursor: pointer;
+      opacity: .7;
+    }   
+}
