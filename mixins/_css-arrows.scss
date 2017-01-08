@@ -1,0 +1,137 @@
+@mixin css_left_arrow(
+    $width: 15px,
+    $border-width: 1px,
+    $position: 50%, 
+    $bg-color: $first-color, 
+    $border-color: $first-color
+    ){
+
+    position: relative;
+    &:after, &:before {
+        right: 100%;
+        top: $position;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:after {
+        border-color: transparent;
+        border-right-color: $bg-color;
+        border-width: $width;
+        margin-top: -$width;
+    }
+
+    &:before {
+        border-color: transparent;
+        border-right-color: $border-color;
+        border-width: $width + $border-width;
+        margin-top: -($width + $border-width);
+    }
+}
+
+@mixin css_right_arrow(
+    $width: 15px,
+    $border-width: 1px,
+    $position: 50%, 
+    $bg-color: $first-color, 
+    $border-color: $first-color
+    ){
+
+    position: relative;
+    &:after, &:before {
+        left: 100%;
+        top: $position;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:after {
+        border-color: transparent;
+        border-left-color: $bg-color;
+        border-width: $width;
+        margin-top: -$width;
+    }
+
+    &:before {
+        border-color: transparent;
+        border-left-color: $border-color;
+        border-width: $width + $border-width;
+        margin-top: -($width + $border-width);
+    }
+}
+
+@mixin css_top_arrow(
+    $width: 15px,
+    $border-width: 1px,
+    $position: 50%, 
+    $bg-color: $first-color, 
+    $border-color: $first-color
+    ){
+
+    position: relative;
+
+    &:after, &:before {
+        bottom: 100%;
+        left: $position;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:after {
+        border-color: transparent;
+        border-bottom-color: $bg-color;
+        border-width: $width;
+        margin-left: -$width;
+    }
+
+    &:before {
+        border-color: transparent;
+        border-bottom-color: $border-color;
+        border-width: $width + $border-width;
+        margin-left: -($width + $border-width);
+    }
+}
+
+@mixin css_bottom_arrow(
+    $width: 15px,
+    $border-width: 1px,
+    $position: 50%, 
+    $bg-color: $first-color, 
+    $border-color: $first-color
+    ){
+
+    position: relative;
+
+    &:after, &:before {
+        top: 100%;
+        left: $position;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:after {
+        border-color: transparent;
+        border-top-color: $bg-color;
+        border-width: $width;
+        margin-left: -$width;
+    }
+
+    &:before {
+        border-color: transparent;
+        border-top-color: $border-color;
+        border-width: $width + $border-width;
+        margin-left: -($width + $border-width);
+    }
+}
