@@ -1,0 +1,13 @@
+@mixin toggle($top, $left){
+  position: absolute;
+  &.appear{
+    top: $top;
+    left: $left;
+    opacity: 1;
+    transition: .2s;
+  }
+  &.disappear{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
